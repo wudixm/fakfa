@@ -134,18 +134,18 @@ func handleRequest(conn net.Conn, ch chan string) {
 
 func writeToFile(logFile string, indexFile string, r *bufio.Reader, skipFirstNChars int, firstLine []byte) {
 	//line, prefix, err := r.ReadLine()
-	f, err := os.Create(logFile)
+	_, err := os.Create(logFile)
 	check(err)
-	writer := bufio.NewWriter(f)
-	n4, err := writer.Write(firstLine[skipFirstNChars:])
-
-	_prefix = true
-
-	for _prefix == true{
-		line, prefix, err := r.ReadLine()
-		
-
-	}
+	//writer := bufio.NewWriter(f)
+	//n4, err := writer.Write(firstLine[skipFirstNChars:])
+	//
+	//_prefix = true
+	//
+	//for _prefix == true{
+	//	line, prefix, err := r.ReadLine()
+	//
+	//
+	//}
 
 }
 
